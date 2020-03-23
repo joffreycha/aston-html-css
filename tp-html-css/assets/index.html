@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Connexion au profil</title>
 </head>
 <body>
@@ -12,16 +13,25 @@
 
     <main>
         <section>
-            <img src="./images/img_avatar2.png" alt="Photo de profil">
+            <div id="avatar">
+                <img src="./images/img_avatar2.png" alt="Photo de profil">
+            </div>
+            
             <form action="" method="post">
-                <label for="first-name">Entrez votre prénom :</label>
-                <input type="text" name="first-name" id="first-name">
+                <div class="field">
+                    <label for="first-name">Entrez votre prénom :</label><br>
+                    <input type="text" name="first-name" id="first-name">
+                </div>
+               
+                <div class="field">
+                    <label for="email">Entrez votre e-mail :</label><br>
+                    <input type="email" name="email" id="email">
+                </div>
 
-                <label for="email">Entrez votre e-mail :</label>
-                <input type="email" name="email" id="email">
-
-                <label for="password">Entrez votre mot de passe :</label>
-                <input type="password" name="password" id="password">
+                <div class="field">
+                    <label for="password">Entrez votre mot de passe :</label><br>
+                    <input type="password" name="password" id="password">
+                </div>
 
                 <button type="submit">Envoyer</button>
             </form>
