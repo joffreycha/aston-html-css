@@ -27,8 +27,8 @@ section
 
 #avatar img
 {
-    margin-bottom: 1em;
-    max-height: 250px;
+    margin: 1em 0;
+    max-height: 35vh;
     border-radius: 50% 50%;
 }
 
@@ -64,11 +64,10 @@ button
     box-shadow: 0px 7px #787878; 
 
     color: white;
-    padding: 8px 10px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+    font-size: 1.2em;
 
+    padding: 6px 8px;
     margin: 1em 0;
 }
