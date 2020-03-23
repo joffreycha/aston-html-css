@@ -1,0 +1,247 @@
+/*
+#e8e4e1
+#95d1cb
+#313c39
+#da5d3a
+#ec8e50
+*/
+
+body
+{
+    margin: auto;
+    background: url("../images/fond.jpg") fixed no-repeat center;
+}
+
+.main-theme, article
+{
+    background-color: #e8e4e1;
+    background-color: rgba(232, 228, 225, 0.5);
+}
+
+.light-theme
+{
+    background-color: #e8e4e1;
+}
+
+.dark-theme, h1, h2, h3, h4
+{
+    background-color: #313c39;
+    background-color: rgb(49, 60, 57, 0.9);
+    color: #da5d3a;
+}
+
+.color-theme
+{
+    background-color: #ec8e50;
+}
+
+h1, h2
+{
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 5%;
+}
+
+
+
+/*NAV*/
+nav a, aside a
+{
+    text-decoration: none;
+    font-variant-caps: small-caps;
+    color: #da5d3a;
+    font-size: 1.2em;
+}
+
+nav a:hover
+{
+    text-decoration: none;
+    font-variant-caps: small-caps;
+    color: #ec8e50;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+nav li
+{
+    display: inline;
+    margin: 0 1%;
+}
+
+
+
+/*ARTICLE*/
+article 
+{
+    border-radius: 10px;
+}
+
+p
+{
+    text-align: justify;
+}
+
+
+.float
+{
+    float: left;
+}
+
+aside
+{
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border: black 1px solid;
+}
+
+aside a
+{
+    text-decoration: none;
+    font-variant-caps: small-caps;
+    color: #da5d3a;
+}
+
+aside a:hover
+{
+    text-decoration: none;
+    font-variant-caps: small-caps;
+    color: #ec8e50;
+}
+
+/*FOOTER*/
+footer
+{
+    text-align: center;
+    padding: 15px 0;
+}
+
+
+.flex-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/*MARGES Intérieures*/
+.p1
+{
+    padding: 1em;
+}
+
+.p2
+{
+    padding: 2em;
+}
+
+.p3
+{
+    padding: 3em;
+}
+
+.p4
+{
+    padding: 4em;
+}
+
+/*MARGES Extérieures*/
+.m1
+{
+    margin: 1em;
+}
+
+.m2
+{
+    margin: 2em;
+}
+
+.m3
+{
+    margin: 3em;
+}
+
+.m4
+{
+    margin: 4em;
+}
+
+/*Margin Top*/
+.mt2
+{
+    margin-top: 10vh;
+}
+
+.mt4
+{
+    margin-top: 20vh;
+}
+
+/*Margin Bottom*/
+.mb2
+{
+    margin-bottom: 10vh;
+}
+
+.mb4
+{
+    margin-bottom: 20vh;
+}
+
+/*Margin Right*/
+.mr2
+{
+    margin-right: 10vh;
+}
+
+.mr4
+{
+    margin-right: 20vh;
+}
+
+/*Margin Vertical*/
+.mv-auto
+{
+    margin: auto 0;
+}
+
+/*Margin Horizontal*/
+.mh-auto
+{
+    margin: 0 auto;
+}
+
+/* Largeur d'un élément */
+
+.w20 
+{
+    width: 20%;
+    min-width: 20%;
+}
+
+.w40 
+{
+    width: 40%;
+    min-width: 40%;
+}
+
+.w60 
+{
+    width: 60%;
+    min-width: 60%;
+}
+
+.w80 
+{
+    width: 80%;
+    min-width: 80%;
+}
+
+.w100 
+{
+    width: 100%;
+    min-width: 100%;
+}
