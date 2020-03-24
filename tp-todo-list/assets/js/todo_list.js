@@ -5,57 +5,31 @@ date = new Date();
 document.getElementById("date").innerHTML = date.toLocaleDateString();
 
 
-// Initialaize localStorage key "taskX" counter
+// Initialize localStorage key "taskX" counter
 let index;
 if (!localStorage.getItem("index")) {
     localStorage.setItem("index", 0);
     index = 0;
-}
-else
+} else
     index = localStorage.getItem("index");
 
 
-// Display the ToDo list from LocalStorage data
+// Load ToDo list from LocalStorage data
 for (const task in localStorage) {
-    console.log(typeof(task));
-    console.log(task);    
-    if (task.startsWith("task")) {
-        // Create a new item <li class="task"></li> and add it to the list
-        li = document.createElement("li");
-        li.setAttribute("class", "task");
-        document.getElementById("todo_list").appendChild(li);
-        
-        // Assign the value to the new item
-        li.innerHTML = localStorage.getItem(task);
-    }
+    if (task.startsWith("task"))
+        addTask(localStorage.getItem(task));
 }
 
 
-/**
- * Add a new task to the list
- */
+// Add a task button click
 document.getElementById("btn_plus").addEventListener("click", () => {
     // Get user input
     let input_todo = document.getElementById("input_todo"); 
-    
-    // Create a new item <li class="task"></li> and add it to the list
-    li = document.createElement("li");
-    li.setAttribute("class", "task");
-    document.getElementById("todo_list").appendChild(li);
-    
-    // Assign the value to the new item
-    li.innerHTML = input_todo.value;
-    
-    // Store the task in localStorage
-    localStorage.setItem("task" + index, li);
-    localStorage.setItem("index", index++);
-    
+    addTask(input_todo.value);
 });
 
 
-/**
- * Clear ToDo list
- */
+// Clear ToDo list
 document.getElementById("btn_clear_list").addEventListener("click", () => {
     let todo_list = document.getElementById("todo_list");
     document.querySelectorAll("li").forEach( (li) => {
@@ -64,3 +38,63 @@ document.getElementById("btn_clear_list").addEventListener("click", () => {
     
     localStorage.clear();
 });
+
+
+
+
+
+
+/******* FUNCTIONS *********/
+
+
+/**
+ * Add a new task to the list
+ */
+function addTask(input_todo) {
+    let todo_list = document.getElementById("todo_list");
+    
+    addButton("check", todo_list);
+    
+    let li = addListItem(todo_list);
+    
+    // Assign the value to the new item
+    li.innerHTML = input_todo;
+
+    // Store the task in localStorage
+    localStorage.setItem("index", index++);
+    localStorage.setItem("task" + index, li);
+
+    addButton("delete_item", todo_list);
+}
+
+
+/**
+ * Add a button
+ * btn_type String: "check" or "delete_item"
+ */
+function addButton(btn_type, parentNode) {
+    let btn = document.createElement("img");
+    btn.setAttribute("class", btn_type);
+    btn.setAttribute("alt", btn_type);
+    btn.setAttribute("src", "./assets/images/" + btn_type + ".svg");
+
+    if (btn_type == "check") 
+        btn.setAttribute("checked", "unchecked"); 
+
+    parentNode.appendChild(btn);
+}
+
+
+/**
+ * Create a new item <li class="task"></li> 
+ * and add it to the list
+ * return the created li node
+ */
+function addListItem(parentNode) {
+    let li = document.createElement("li");
+    li.setAttribute("class", "task");
+    
+    parentNode.appendChild(li);
+
+    return li;
+}

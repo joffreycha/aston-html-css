@@ -61,7 +61,7 @@ main
     height: 15px;
 }
 
-.remove
+.delete_item
 {
     background-image: url("../images/delete.svg");
     border-radius: 50%;
