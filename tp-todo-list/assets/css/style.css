@@ -1,0 +1,92 @@
+body
+{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+    background-color: rgb(229, 229, 229);
+
+}
+
+/*** Banner ***/
+header
+{
+    background-image: url("../images/banner.jpg");
+    border-radius: 15px 15px 0 0;
+    margin-top: 25%;
+    width: 100%;
+    height: 199px;
+}
+
+#btn_clear_list
+{
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+#date
+{
+    color: white;
+    font-size: 1em;
+    margin-left: 10px;
+}
+
+
+
+/*** List ***/
+main
+{
+    background-color: white;
+}
+
+#todo_list
+{
+    min-height: 220px;
+    margin: 0 0;
+    padding: 10px;   
+}
+
+#todo_list li
+{
+    list-style: none;
+}
+
+.check
+{
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+
+.remove
+{
+    background-image: url("../images/delete.svg");
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+
+/*** Input field ***/
+#btn_plus
+{
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+
+#input_todo
+{
+    margin-left: 4px;
+    border: rgb(65, 98, 246) solid 1px;
+    width: 78%;
+}
+
+#add_todo
+{
+    width: 320px;
+}
